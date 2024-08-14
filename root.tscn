@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp3dakf1smuht"]
+
+[ext_resource type="Script" path="res://temp2rgb.gd" id="1_23p0i"]
+
+[node name="Root" type="Node2D"]
+script = ExtResource("1_23p0i")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 300.0
+offset_top = 40.0
+offset_right = 886.0
+offset_bottom = 327.0
+
+[node name="HSlider" type="HSlider" parent="."]
+custom_minimum_size = Vector2(360, 0)
+offset_left = 300.0
+offset_top = 378.0
+offset_right = 886.0
+offset_bottom = 394.0
+min_value = 1000.0
+max_value = 15000.0
+value = 1500.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 355.0
+offset_top = 442.0
+offset_right = 782.0
+offset_bottom = 559.0
+theme_override_font_sizes/font_size = 41
+text = "Input temp: XXXX K
+Output color: (R, G, B)"
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]

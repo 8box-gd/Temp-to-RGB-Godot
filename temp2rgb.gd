@@ -56,9 +56,9 @@ func update_everything() -> void:
 	color_rect.color = temp_to_rgb(slider.value)
 	label.text = ("Input temp: " + str(slider.value) + " K
 	Output color: ("
-	+ str(snapped(color_rect.color.r, 0.01)) +", "
-	+ str(snapped(color_rect.color.g, 0.01)) +", "
-	+ str(snapped(color_rect.color.b, 0.01)) + ")")
+	+ str(snapped(color_rect.color.r, 0.001)) +", "
+	+ str(snapped(color_rect.color.g, 0.001)) +", "
+	+ str(snapped(color_rect.color.b, 0.001)) + ")")
 
 func _on_h_slider_value_changed(_value) -> void:
 	update_everything()
